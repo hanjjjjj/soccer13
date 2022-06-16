@@ -139,7 +139,7 @@
                         <p>
                             2012 Real Madrid CF ~ 2022 Real Madrid CF
                         </p>
-                        <video src="" width="700" height="700" controls> </video>
+                        <video src="/resources/video/modric.mp4" width="700" height="700" controls> </video>
 
                     </div>
                 </div>
