@@ -139,7 +139,7 @@
                         <p>
                             2009 Real Madrid CF ~ 2018 Real Madrid CF
                         </p>
-                        <video src="" width="700" height="700" controls></video>
+                        <video src="/resources/video/CRonaldo.mp4" width="700" height="700" controls></video>
 
 
                     </div>
