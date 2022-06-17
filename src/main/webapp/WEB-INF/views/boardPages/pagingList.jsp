@@ -22,6 +22,7 @@
     </style>
 </head>
 <body>
+
 <div class="container mt-3">
     <form action="/board/search" method="get">
         <select name="searchType">
@@ -54,7 +55,7 @@
             </c:when>
         </c:choose>
     </>
-    <c:if test="${sessionScope.loginMemberId =='admin'}">
+    <c:if test="${sessionScope.loginMemberId eq 'admin'}">
         <button onclick="location.href='/admin'">관리자</button>
     </c:if>
 </div>
@@ -63,7 +64,7 @@
         <div>로그인 하세용</div>
     </c:when>
     <c:otherwise>
-        <button onclick="/board/save">로그인완료</button>
+        <button>로그인완료</button>
     </c:otherwise>
 </c:choose>
 <div class="container">
@@ -79,7 +80,10 @@
             <tr>
                 <td>${board.id}</td>
                 <td>${board.boardWriter}</td>
-                <td><a href="/board/detail?page=${paging.page}&id=${board.id}">${board.boardTitle}</a></td>
+                <td>
+<%--                    <a href="/board/detail?page=${paging.page}&id=${board.id}$loginId=${sessionScope.loginMemberId}">${board.boardTitle}</a>--%>
+                <a onclick="boardDetail(${board.id})">${board.boardTitle}</a>
+                </td>
                 <td><fmt:formatDate pattern="yyyy-MM-dd hh:mm:ss"
                                     value="${board.boardCreateDate}"></fmt:formatDate></td>
                 <td>${board.boardHits}</td>
@@ -133,4 +137,10 @@
 
 
 </body>
+<script>
+    const boardDetail = (id) =>{
+        const page = '${paging.page}';
+        location.href = "/board/detail?id="+id + "&page=" + page;
+    }
+</script>
 </html>

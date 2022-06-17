@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 @Controller
@@ -48,11 +49,14 @@ public class BoardController {
     }
     //상세조회
     @GetMapping("/detail")
-    public String findById(@RequestParam("id")Long id, Model model,
-     @RequestParam(value="page", required = false, defaultValue = "1")int page){
+    public String findById(@RequestParam("id")Long id, HttpSession session, Model model,
+                           @RequestParam(value="page", required = false, defaultValue = "1")int page){
+        String loginId = (String) session.getAttribute("loginMemberId");
         BoardDTO boardDTO = boardService.findById(id);
         model.addAttribute("board",boardDTO);
         model.addAttribute("page", page);
+        System.out.println("loginId = " + loginId);
+        model.addAttribute("loginId", loginId);
         // 댓글 목록도 가져가야 함.
         List<CommentDTO> commentDTOList = commentService.findAll(id);
         model.addAttribute("commentList",commentDTOList);

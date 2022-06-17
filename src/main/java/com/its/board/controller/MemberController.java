@@ -1,8 +1,7 @@
 package com.its.board.controller;
 
-import com.its.board.dto.BoardDTO;
+
 import com.its.board.dto.MemberDTO;
-import com.its.board.service.BoardService;
 import com.its.board.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -46,7 +45,6 @@ public class MemberController {
         if (loginMember != null) {
             model.addAttribute("loginMember", loginMember);
             session.setAttribute("loginMemberId", loginMember.getMemberId());
-            System.out.println(session);
             session.setAttribute("loginId", loginMember.getId());
             return "/soccer/home";
         } else {

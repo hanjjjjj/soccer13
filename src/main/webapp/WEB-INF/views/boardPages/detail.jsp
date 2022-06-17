@@ -16,6 +16,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </head>
 <body>
+
     <h2>글 목록</h2>
     글번호:${board.id} <br>
     제목:${board.boardTitle} <br>
@@ -24,11 +25,10 @@
     내용:${board.boardContents} <br>
     작성일자:${board.boardCreateDate} <br>
     조회수:${board.boardHits} <br>
-    <c:if test="${sessionScope.loginMemberId == board.boardWriter || sessionScope.loginMemberId == 'admin'}">
-    <button onclick="boardUpdate()">수정 </button>
+    <c:if test="${loginId== board.boardWriter || loginId== 'admin'}">
     <button onclick="boardDelete()">삭제 </button>
     </c:if>
-    <c:if test="${sessionScope.loginMemberId =!null}">
+    <c:if test="${sessionScope.loginMemberId eq board.boardWriter}">
         <button onclick="boardUpdate()">수정 </button>
     </c:if>
     <button onclick="findAll()">목록</button>
@@ -36,7 +36,7 @@
 
 <div class="container">
     <div id="comment-write" class="input-group mb-3">
-        <input type="text" id="commentWriter" class="form-control" placeholder="작성자" value="" >
+        <input type="text" id="commentWriter" class="form-control" placeholder="작성자" value="${loginId}"readonly>
         <input type="text" id="commentContents" class="form-control" placeholder="내용">
         <button id="comment-write-btn" class="btn btn-primary">댓글작성</button>
     </div>

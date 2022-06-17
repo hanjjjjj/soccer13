@@ -19,7 +19,7 @@
 
         <form action="/board/save" method="post">
             <input class="form-control mb-2" type="text" name="boardTitle" placeholder="제목"><br>
-            <input class="form-control mb-2" type="text" name="boardWriter" placeholder="작성자" value="${sessionScope.loginMemberId}" readonly><br>
+            <input class="form-control mb-2" type="text" name="boardWriter" placeholder="작성자" value=""><br>
             <input class="form-control mb-2" type="text" name="boardPassword" placeholder="비번"><br>
             <textarea class="form-control mb-2" name="boardContents" rows="5" cols="10"></textarea>
             <input class="btn btn-primary" type="submit"  placeholder="글작성"><br>

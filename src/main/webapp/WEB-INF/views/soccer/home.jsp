@@ -31,7 +31,6 @@
 
 </head>
 <body>
-${sessionScope.loginMemberId};
 
 
 <div class="site-wrap">
