@@ -9,11 +9,6 @@
             values(#{boardWriter},#{boardPassword},#{boardTitle},#{boardContents},now())
     </insert>
 
-    <insert id="saveFile" parameterType="board">
-        insert into board_table(boardWriter,boardPassword,boardTitle,boardContents,boardCreateDate,boardFileName)
-        values(#{boardWriter},#{boardPassword},#{boardTitle},#{boardContents},now(), #{boardFileName})
-    </insert>
-
     <select id="findAll" resultType="board">
         select * from board_table order by id desc
     </select>

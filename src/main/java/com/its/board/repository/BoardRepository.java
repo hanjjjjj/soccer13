@@ -37,9 +37,6 @@ public class BoardRepository {
         sql.update("Board.update", boardDTO);
     }
 
-    public void saveFile(BoardDTO boardDTO) {
-        sql.insert("Board.saveFile", boardDTO);
-    }
 
     public int boardCount() {
         return sql.selectOne("Board.count");

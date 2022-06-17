@@ -46,19 +46,7 @@ public class BoardService {
         boardRepository.update(boardDTO);
     }
 
-    public void saveFile(BoardDTO boardDTO) throws IOException {
 
-        MultipartFile boardFile = boardDTO.getBoardFile(); //1
-        String boardFileName = boardFile.getOriginalFilename(); //2
-        boardFileName = System.currentTimeMillis() + "-" + boardFileName; //2.1
-        boardDTO.setBoardFileName(boardFileName); //3
-        String savePath = "D:\\spring_img\\" + boardFileName; //4
-        //5.
-        if(!boardFile.isEmpty()){
-            boardFile.transferTo(new File(savePath));
-        }
-        boardRepository.saveFile(boardDTO); // 6.
-    }
     private static final int PAGE_LIMIT = 5; // 한 페이지에 보여줄 글 갯수
     private static final int BLOCK_LIMIT = 3;
 

@@ -15,8 +15,8 @@
     <form action="/board/update" method="post" name="updateForm">
         글번호:<input type="text" name="id" value="${boardUpdate.id}" class="form-control" readonly><br>
         제목:<input type="text" name="boardTitle" value="${boardUpdate.boardTitle}" class="form-control"><br>
-        비밀번호:<input type="text" name="boardPassword" id=passwordConfirm class="form-control"><br>
-        작성자:<input type="text" name="boardWriter" value="${boardUpdate.boardWriter}" class="form-control" readonly>
+        비밀번호:<input type="text" name="boardPassword" id=passwordConfirm class="form-control" readonly><br>
+        작성자:<input type="text" name="boardWriter" value="${boardUpdate.boardWriter}" class="form-control" readonly><br>
         내용:<input type="text" name="boardContents" value="${boardUpdate.boardContents}" class="form-control"><br>
         <textarea name="boardContents" cols="30" rows="10">${boardUpdate.boardContents}</textarea><br>
         <input type="button" class="btn btn-danger" value="수정" onclick="boardUpdate()">

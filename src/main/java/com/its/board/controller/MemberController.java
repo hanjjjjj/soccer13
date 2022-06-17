@@ -40,10 +40,13 @@ public class MemberController {
     @PostMapping("/login")
     public String login(@ModelAttribute MemberDTO memberDTO, Model model, HttpSession session) {
         MemberDTO loginMember = memberService.login(memberDTO);
+        System.out.println("MemberController.login");
+        System.out.println(loginMember);
         // 세션(session)
         if (loginMember != null) {
             model.addAttribute("loginMember", loginMember);
             session.setAttribute("loginMemberId", loginMember.getMemberId());
+            System.out.println(session);
             session.setAttribute("loginId", loginMember.getId());
             return "/soccer/home";
         } else {

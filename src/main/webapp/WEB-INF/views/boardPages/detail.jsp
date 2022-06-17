@@ -24,8 +24,6 @@
     내용:${board.boardContents} <br>
     작성일자:${board.boardCreateDate} <br>
     조회수:${board.boardHits} <br>
-    <img src="${pageContext.request.contextPath}/upload/${board.boardFileName}"
-         alt="" height="100" width="100">
     <c:if test="${sessionScope.loginMemberId == board.boardWriter || sessionScope.loginMemberId == 'admin'}">
     <button onclick="boardUpdate()">수정 </button>
     <button onclick="boardDelete()">삭제 </button>
@@ -38,7 +36,7 @@
 
 <div class="container">
     <div id="comment-write" class="input-group mb-3">
-        <input type="text" id="commentWriter" class="form-control" placeholder="작성자"value="${sessionScope.loginMemberId}" readonly>
+        <input type="text" id="commentWriter" class="form-control" placeholder="작성자" value="" >
         <input type="text" id="commentContents" class="form-control" placeholder="내용">
         <button id="comment-write-btn" class="btn btn-primary">댓글작성</button>
     </div>
@@ -65,6 +63,7 @@
 </body>
 <script>
     $("#comment-write-btn").click(function(){
+        console.log('${sessionScope.loginMemberId}');
         const commentWriter = document.getElementById("commentWriter").value;
         const commentContents = document.getElementById("commentContents").value;
         const boardId = `${board.id}`;
@@ -94,7 +93,6 @@
                 }
                 output += "</table>";
                 document.getElementById('comment-list').innerHTML = output;
-                document.getElementById('commentWriter').value='';
                 document.getElementById('commentContents').value='';
             },
             error: function (){

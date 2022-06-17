@@ -87,15 +87,7 @@ public class BoardController {
     }
 
     // 글작성화면(파일)
-    @GetMapping("/saveFile")
-    public String saveFileForm() {
-        return "boardPages/saveFile";
-    }
-    @PostMapping("/saveFile")
-    public String saveFile(@ModelAttribute BoardDTO boardDTO) throws IOException {
-        boardService.saveFile(boardDTO);
-        return "redirect:/board/findAll";
-    }
+
 
     @GetMapping("/paging")
     // /board/paging?page=1

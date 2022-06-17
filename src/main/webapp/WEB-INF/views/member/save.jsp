@@ -30,7 +30,6 @@
     <input class="form-control mb-2" type="text" name="memberName" placeholder="이름"><br>
     <input class="form-control mb-2" type="text" name="memberEmail" placeholder="이메일"><br>
     <input class="form-control mb-2" type="text" name="memberPhone" placeholder="전화번호"><br>
-    <input class="form-control-lg" type="file"><br>
     <input class="btn btn-primary" type="submit" value="회원가입"><br>
 
 

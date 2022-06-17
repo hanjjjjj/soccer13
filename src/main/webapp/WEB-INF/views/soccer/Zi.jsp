@@ -85,7 +85,6 @@
                                             <li><a href="/Ro">CRISTIANO RONALDO</a></li>
                                             <li><a href="/RON">RONALDO</a></li>
                                             <li><a href="/KO">Raymond Kopa</a></li>
-                                            <li><a href="/Ramos">Sergio Ramos</a></li>
                                             <li><a href="/Figo">FIGO</a></li>
                                             <li><a href="/Owan">Owan</a></li>
                                             <li><a href="/cn">CANNAVAROO</a></li>
@@ -113,7 +112,7 @@
                 <div class="col-lg-12">
                     <div class="hero-wrap text-center" style="background-image: url('/resources/css2/images/madrid.png');" data-stellar-background-ratio="0.5">
                         <div class="hero-contents">
-                            <h2>Legend Players</h2>
+                            <h2>Ballon d'Or Awards Players</h2>
                             <p><a href="/home">Home</a> <span class="mx-2">/</span> <strong>Players</strong></p>
                         </div>
                     </div>
@@ -172,7 +171,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="widget mb-4">
-                    <h3>Upcoming Match</h3>
+                    <h3>Sponsor</h3>
                     <ul class="list-unstyled links">
                         <li>
                             <a href="#">

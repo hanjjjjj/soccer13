@@ -40,7 +40,7 @@
     </c:choose>
         <c:choose>
             <c:when test="${sessionScope.loginMemberId != null}">
-                <button onclick="location.href='/board/saveFile'">글쓰기</button>
+                <button onclick="location.href='/board/save'">글쓰기</button>
             </c:when>
         </c:choose>
         <c:choose>

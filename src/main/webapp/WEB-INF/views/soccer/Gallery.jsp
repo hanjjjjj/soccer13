@@ -188,7 +188,7 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="widget mb-4">
-                        <h3>Upcoming Match</h3>
+                        <h3>Sponsor</h3>
                         <ul class="list-unstyled links">
                             <li>
                                 <a href="#">
