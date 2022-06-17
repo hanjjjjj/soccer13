@@ -41,6 +41,7 @@
             </style>
 <li><a href="/save-form" class="nav-link px-2 text-secondary">회원가입</a></li><br>
 <li><a href="/login-form" class="nav-link px-2 text-white ">로그인</a></li>
+            <li><a href="/board/findAll" class="nav-link px-2 text-white ">목록</a></li>
 
             <style>
                 video {
